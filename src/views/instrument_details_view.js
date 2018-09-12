@@ -13,6 +13,11 @@ InstrumentDetails.prototype.bindEvents = function() {
 InstrumentDetails.prototype.displayDetails = function(instrument) {
   const instrumentDetails = document.querySelector('#instrument-details');
   instrumentDetails.textContent = "";
+
+  const instrumentNameHeader = document.createElement('h1');
+  instrumentDetails.appendChild(instrumentNameHeader);
+  instrumentNameHeader.textContent = instrument.name;
+
   const instrumentParagraph = document.createElement('p');
   instrumentDetails.appendChild(instrumentParagraph);
   instrumentParagraph.textContent = instrument.description;
